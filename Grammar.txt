@@ -1,0 +1,12 @@
+main => var_decl | stmt
+var_decl => type ident ;
+type => int | double
+stmt => if | expr | print | return
+if => if (expr) {stmt} else
+else => else {stmt} | 
+expr => ident | ident rop ident | ident rop constant | ident = ident aop ident | ident = ident aop constant | ident = constant aop constant;
+aop => + | - | * | / 
+rop => < | > | ==
+print => print ( "str" ) ;
+return => return constant ;
+constant => int_val | double_val
